@@ -1,7 +1,9 @@
 package bai1;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 
@@ -29,12 +31,24 @@ public class Que {
 		listKh.add(kh9);
 		listKh.add(kh10);
 		Iterator<Customer> itr = listKh.iterator();
+//		while(itr.hasNext())
+//		{
+//			Customer element = itr.next();
+//			
+//				System.out.println(element.toString());
+//		}
 		// tim khach hang
+		List<Customer> listKhCoNhac = new ArrayList<Customer>();
 		while(itr.hasNext())
 		{
 			Customer element = itr.next();
-			if(element.getMusicName() == "toichuabietyeu")
-				System.out.println(element.getName());
+			if(element.getMusicName()=="toichuabietyeu")
+			{
+				listKhCoNhac.add(element);			}
+		}
+		for(Customer kh : listKhCoNhac)
+		{
+			System.out.println(kh.toString());
 		}
 	}
 }

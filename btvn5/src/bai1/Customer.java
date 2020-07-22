@@ -35,5 +35,9 @@ public class Customer {
 	public void setMusicName(String musicName) {
 		this.musicName = musicName;
 	}
+	public String toString()
+	{
+		return "callId=" + callId + ", name =" + name +", callTime=" + callTime + ", musicName = " + musicName;
+	}
 	
 }
